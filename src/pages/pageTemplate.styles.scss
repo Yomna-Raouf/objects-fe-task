@@ -1,7 +1,7 @@
 @mixin line-clamp($lines) {
     -webkit-line-clamp: #{$lines};
     line-clamp: #{$lines};
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
 
 .pageTemplate {

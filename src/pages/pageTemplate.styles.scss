@@ -1,0 +1,26 @@
+@mixin line-clamp($lines) {
+    -webkit-line-clamp: #{$lines};
+    line-clamp: #{$lines};
+    white-space: nowrap;
+}
+
+.pageTemplate {
+    margin-top: 70px;
+    section {
+        padding: 25px;
+    }
+
+    .ellipseText {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+    }
+
+    .line-clamp-1 {
+        @include line-clamp(1);
+    }
+
+    .line-clamp-2 {
+        @include line-clamp(2);
+    }
+}

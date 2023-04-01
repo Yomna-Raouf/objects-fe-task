@@ -1,6 +1,8 @@
+import PostsTemplate from './Posts.template';
+
 const PostsPage = () => {
   return (
-    <div>PostsPage</div>
+    <PostsTemplate />
   )
 }
 

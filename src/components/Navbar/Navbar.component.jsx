@@ -6,9 +6,11 @@ import Modal from 'components/Modal';
 
 import { ReactComponent as Logo } from 'assets/crown.svg';
 
+import CreatePostForm from 'components/CreatePostForm';
+
 import './Navbar.styles.scss';
 
-const Navbar = () => {
+const Navbar = ({ setPosts, posts }) => {
     const [showModal, setShowModal] = useState(false);
 
     const toggleModalVisibility = () => setShowModal(!showModal);
@@ -21,8 +23,8 @@ const Navbar = () => {
                 </Link>
                 <h1>Social App</h1>
                 <button onClick={toggleModalVisibility} >Add post</button>
-                <Modal title="My Modal" onClose={toggleModalVisibility} show={showModal}>
-                    <p>modal body</p>
+                <Modal title="Create Post" onClose={toggleModalVisibility} show={showModal}>
+                    <CreatePostForm toggleModalVisibility={toggleModalVisibility} setPosts={setPosts} posts={posts} />
                 </Modal>
             </div>
         </nav>

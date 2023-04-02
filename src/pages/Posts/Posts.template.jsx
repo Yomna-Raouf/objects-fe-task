@@ -9,8 +9,13 @@ const PostsTemplate = ({ posts, error }) => {
         <div className='pageTemplate' >
             <Navbar />
             <section>
-                {posts?.map(({ id, title, body }) => 
-                    <Post key={id} id={id} title={title} body={body} />
+                {posts?.map((post) => 
+                    <Post 
+                        key={post?.id} 
+                        id={post?.id} 
+                        title={post?.title} 
+                        body={post?.body} 
+                    />
                 )}
             </section>
         </div>
